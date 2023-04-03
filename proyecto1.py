@@ -5,6 +5,10 @@ class Processor:
     def __init__(self, number, data):
         self.number = number
         self.data = data
+        self.cache = {"000": 0,
+                      "001": 0,
+                      "010": 0,
+                      "011": 0}
     def __str__(self):
         return f"{self.number}"
 
@@ -77,9 +81,12 @@ def main():
     #Create processors
     p1 = Processor(1, "primeros datos de prueba 1")
     p2 = Processor(2, "segundos datos de prueba 2")
+    p3 = Processor(1, "terceros datos de prueba 3")
+    p4 = Processor(2, "cuartos datos de prueba 4")
+
 
     #Processors list
-    processors = [p1,p2]
+    processors = [p1,p2,p3,p4]
 
     #Creates display window
     root = tk.Tk()
